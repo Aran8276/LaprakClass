@@ -23,7 +23,7 @@ public class Rasional {
     A = (pembilang < penyebut) ? penyebut : pembilang;
     B = (pembilang < penyebut) ? pembilang : penyebut;
 
-    while (B != 0) {
+    for (; B != 0; ) {
       temp = A % B;
       A = B;
       B = temp;
@@ -40,15 +40,45 @@ penyebut;
   public boolean moreThan(Rasional A) {
     return (pembilang * A.penyebut > penyebut * A.pembilang);
   }
+  // operator <
+  public boolean lessThan(Rasional A) {
+    return (pembilang * A.penyebut < penyebut * A.pembilang);
+  }
+  // operator <=
+  public boolean lessOrEqual(Rasional A) {
+    return (pembilang * A.penyebut <= penyebut * A.pembilang);
+  }
+  // operator >=
+  public boolean moreOrEqual(Rasional A) {
+    return (pembilang * A.penyebut >= penyebut * A.pembilang);
+  }
   // operator Unary- ---> A = -A
   public void negasi() {
     pembilang = -pembilang;
   }
 
-  //operator unary += \
+  // operator unary += 
   public void unaryPlus(Rasional A){
     pembilang = pembilang * A.penyebut + penyebut * A.pembilang;
     penyebut *= A.penyebut;
+  }
+
+  // operator unary -
+  public void unaryMinus(Rasional A){
+    pembilang = pembilang * A.penyebut - penyebut * A.pembilang;
+    penyebut *= A.penyebut;
+  }
+
+  // operator *
+  public void kali(Rasional A){
+    pembilang *= A.pembilang;
+    penyebut *= A.penyebut;
+  }
+
+  // operator /
+  public void bagi(Rasional A){
+    pembilang *= A.penyebut;
+    penyebut *= A.pembilang;
   }
 
   public void cetak() {

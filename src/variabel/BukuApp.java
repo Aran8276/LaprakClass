@@ -3,7 +3,6 @@ package variabel;
 public class BukuApp {
 
    public static void main(String[] args) {
-
       Penerbit gm = new Penerbit("Gramedia", "Jakarta");
       Penerbit sp = new Penerbit("Springer", "New York");
 
@@ -20,7 +19,6 @@ public class BukuApp {
       paper.penerbit = sp;
 
       // ===
-
       artikel.display();
       paper.display();
 
