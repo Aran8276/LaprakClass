@@ -1,4 +1,4 @@
-package vairabel;
+package variabel;
 
 public class Buku {
    public String judul;
